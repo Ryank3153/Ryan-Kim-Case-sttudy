@@ -28,7 +28,7 @@ Data360 <- read_excel(file.choose())
 data_360_scaled <- scale(Data360)
 
 
-# APPENDIX 1: Advanced Clustering Visuals
+# APPENDIX 1
 
 
 # 1. Scree Plot 
@@ -145,8 +145,6 @@ ggplot(cluster_sizes, aes(ymax = ymax, ymin = ymin, xmax = 4, xmin = 3, fill = C
 
 # APPENDIX 6: 100% Stacked Bar Chart 
 
-
-# Shows the PROPORTION of income levels within each cluster, which is better for targeting
 ggplot(Data360_final, aes(x = Cluster, fill = as.factor(LevIncome))) +
   geom_bar(position = "fill", color = "white") +
   scale_y_continuous(labels = scales::percent) +
